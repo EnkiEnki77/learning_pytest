@@ -33,7 +33,7 @@ def test_very_slow():
     result = my_functions.add(1, 4)
     assert result == 5
 
-@pytest.mark.skip(reason="this feature is dumb.")
+@pytest.mark.skip(reason="this feature is broken at the moment.")
 def test_dumb():
     result = my_functions.add(1, 4)
     assert result == 5
