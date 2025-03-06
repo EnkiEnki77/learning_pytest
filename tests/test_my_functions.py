@@ -5,6 +5,10 @@ def test_add():
     result = my_functions.add(1, 4)
     assert result == 5
 
+def test_concatenate_strings():
+    result = my_functions.add("I like ", "burgers")
+    assert result == "I like burgers"
+
 def test_divide():
     result = my_functions.divide(4, 2)
     # assert does a conditional check, if the expression results in true the code is allowed to continue running
