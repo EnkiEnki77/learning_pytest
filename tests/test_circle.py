@@ -14,6 +14,15 @@ class TestCircle:
 
     def teardown_method(self, method):
         print(f"Tearing down {method}")
+    #     You can then delete the instance of the class at the end of the method test.
+        del self.circle
 
     def test_area(self):
-        assert self.circle.area() == math.pi * self.circle.radius ** 2
+        result = self.circle.area()
+        expected = math.pi * self.circle.radius ** 2
+        assert result == expected
+
+    def test_perimeter(self):
+        result = self.circle.perimeter()
+        expected = 2 * math.pi * self.circle.radius
+        assert result == expected
